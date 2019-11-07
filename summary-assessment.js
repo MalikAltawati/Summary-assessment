@@ -212,32 +212,32 @@ function ReadingList(){
     obj.AddBook= addBook;
 
   return obj;
-  }
+}
 
-  function read(number){
-    return number
-  }
-  function unread(number){
-    return number
-  }
-  function toRead(array){
-    return array
-  }
-  function currentRead(name){
-    return name;
-  }
-  function readBooks(array){
-    return array
-  }
-  function AddBook(name){
-    this.toRead(name)
-    this.unread(1)
-    this.readBooks(this.currentRead)
-    this.read(1)
-    this.currentRead = this.readBooks([0])
-    this.unRead(1)
-  }
-  
+    function read(number){
+      return number
+    }
+    function unread(number){
+      return number
+    }
+    function toRead(array){
+      return array
+    }
+    function currentRead(name){
+      return name;
+    }
+    function readBooks(array){
+      return array
+    }
+    function AddBook(name){
+      this.toRead(name)
+      this.unread(1)
+      this.readBooks(this.currentRead)
+      this.read(1)
+      this.currentRead = this.readBooks([0])
+      this.unRead(1)
+    }
+    
   //=============================================================================
   /*                                  Q7                                       */
   //=============================================================================
@@ -256,7 +256,32 @@ function ReadingList(){
   //  safe('silver-bar','big') => "Can't fit"
   //  safe('money','small') => "watch gold-bar money"
   
-  // Write your code here .....
+ function makeSafe(initial){
+    var storageSize = initial
+    var item = item
+    var itemSize = itemSize
+    return{
+      addItem: function(item,itemSize){
+        if (itemSize === "big" || itemSize === "medium"|| itemSize === "small"){
+          if (itemSize === "big"){
+            storageSize - 3
+            item = item + item
+          } else if (itemSize === "medium"){
+            storageSize - 2
+            item = item + item
+          } else if (itemSize === "small"){
+            storageSize - 1
+            item = item + item
+          } else if ( storageSize === 0 ){
+            return "Can't fit"
+          }
+
+         return item
+        }
+      }
+    }
+    return item
+  }
   
   //=============================================================================
   /*                                  Q8                                       */
