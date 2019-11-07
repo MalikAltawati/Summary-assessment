@@ -323,10 +323,18 @@ function ReadingList(){
   //================================================================================
   // Theoretical questions.
   // 1- In your own words,Why do we use Closures ?
+
+  // we use closures we dont dont change the local variables and make the function independet
   
   // 2- In OOP, what does "this" refer to ?
+
+  //this refers to the variable arount urs so u use them
   
   // 3- What is jQuery?
+  // is a javascript library 
   
   // 4- what is the diffrence between Closure's methods and The OOP's methods?
+  // OOP is less processing where when it comes to computing , it takes less process in memory than Closures
+  // and functions are only declared once in OOP for all variables  unlike clousers
+  // so I beleive OOP is more Effecient than just Regular Closures
   
