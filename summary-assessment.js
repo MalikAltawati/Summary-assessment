@@ -144,6 +144,7 @@ function each(coll, f) {
    bakePizza a function that display a string with your pizza description after 2 seconds. ex "Your thin M 8 slice pizza is done" 
    eatSlice a function that let you eat from the pizza as long as the numberOfSlice is greater than zero and decrease the total number of slices by one.
    */
+
   //Example:
   // var pizza = makePizza("thin", "M", 2);
   // pizza.addIngredients("tomato");
@@ -156,7 +157,27 @@ function each(coll, f) {
   // pizza.eatSlice();
   
   // Write your code here .....
-  
+   function Makepizza (crust , size, numberOfSlice){
+    var crust = crust; // "thin" - "thick"
+    var size = size; // "M" - "L"
+    var numberOfSlice = numberOfSlice // hold the number of slice, ex: 8
+    var ingredients = "" ;
+    return{
+      addIngredients: function(ingred){
+       ingredients += ingred + ","
+      }, displayIngredaints: function(){
+        return ingredients
+      }, bakePizza: function(){
+        return "Your "+ crust+" "+ size+" "+ numberOfSlice+ " slice pizza is done"
+      }, eatSlice: function(){
+        if (numberOfSlice > 0){
+          numberOfSlice--
+          return numberOfSlice
+        }
+      }
+    }
+   }
+
   //=============================================================================
   /*                                  Q6                                      */
   //=============================================================================
