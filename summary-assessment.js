@@ -76,10 +76,18 @@ function each(coll, f) {
   // countOccurrences("hello", "l"); // 2
   // countOccurrences("hello, world!", "l"); // 3
   
-  function countOccurrences(string, character) {
+  function countOccurrences(array, character) {
       // your code is here
+      var result = 0;
+      return filter(array,function(element){
+        if (element === character){
+          return result++
+        } 
+      })
+         
+           
   }
-  
+  /////////////// in complete 
   //=============================================================================
   /*                                  Q3                                    */
   //=============================================================================
@@ -89,7 +97,16 @@ function each(coll, f) {
   // wordsLongerThanThree("Hello Mad World") //["Hello", "World"]
   
   function wordsLongerThanThree(str) {
-      // TODO: your code here 
+    str = str.split(" ")
+    return map(str,function(element,i){
+      if ( element.length > 3){
+        return element
+      } else{
+        delete element
+      }
+
+    })
+      
   }
   
   //=============================================================================
