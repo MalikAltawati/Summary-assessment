@@ -122,6 +122,11 @@ function each(coll, f) {
   
   function repeatString(str, count) { 
    // TODO: your code here 
+   if (count === 1){
+    return str
+   }
+
+   return str + repeatString(str , count-1)
   } 
    
   
