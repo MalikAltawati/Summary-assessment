@@ -59,7 +59,12 @@ function each(coll, f) {
   //wordLengths("hello its me") // [5,3,2]
   
   function wordLengths(str) {
-      // TODO: your code here 
+    
+      str = str.split(" ")
+      return map(str,function(element,i){
+        return element.length
+      })
+
   }
   
   //=============================================================================
