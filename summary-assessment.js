@@ -182,6 +182,7 @@ function each(coll, f) {
   /*                                  Q6                                      */
   //=============================================================================
   /*
+
   Create a ReadingList class by using OOP concept, where:
   Your class should has:
   "read" for the number of books that finish reading
@@ -201,8 +202,41 @@ function each(coll, f) {
   */
   
   // Now, to make sure that you are actually reading, make a comment below this and type: Yes I am
-  
-  // Write your code here .....
+function ReadingList(){
+    var obj = {};
+    obj.read= read;
+    obj.unread= unread;
+    obj.toRead= toRead;
+    obj.currentRead= currenRead;
+    obj.readBooks= readBooks;
+    obj.AddBook= addBook;
+
+  return obj;
+  }
+
+  function read(number){
+    return number
+  }
+  function unread(number){
+    return number
+  }
+  function toRead(array){
+    return array
+  }
+  function currentRead(name){
+    return name;
+  }
+  function readBooks(array){
+    return array
+  }
+  function AddBook(name){
+    this.toRead(name)
+    this.unread(1)
+    this.readBooks(this.currentRead)
+    this.read(1)
+    this.currentRead = this.readBooks([0])
+    this.unRead(1)
+  }
   
   //=============================================================================
   /*                                  Q7                                       */
